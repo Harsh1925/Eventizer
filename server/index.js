@@ -6,12 +6,12 @@ import postRoutes from "./routes/posts.js";
 
 const app = express();
 
-app.use("/posts", postRoutes);   //Means we have to go to http://localhost:5000/posts
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
+app.use("/posts", postRoutes);   //Means we have to go to http://localhost:5000/posts
 const CONNECTION_URL = "mongodb+srv://harsh:harsh@cluster0.4kielek.mongodb.net/?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5000;
 
