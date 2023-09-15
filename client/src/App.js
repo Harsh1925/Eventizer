@@ -11,7 +11,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getPosts);
+    dispatch(getPosts());
   }, [dispatch]);
 
   return (
@@ -22,10 +22,10 @@ function App() {
           <div className="col-lg-2">
             <p>Do something, Where the hell are you ?</p>
           </div>
-          <div className="col-lg-7 boxy" id="cards-body">
+          <div className="col-lg-8 boxy" id="cards-body">
             <Posts />
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-2">
             <Form />
           </div>
           <div className="card-footer">

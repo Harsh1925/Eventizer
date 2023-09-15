@@ -20,10 +20,11 @@ const Form = () => {
 
     return (
         <>
-            <form noValidate onSubmit={handleSubmit}>
+            <form noValidate onSubmit={handleSubmit} className="eventForm">
+                <h3 style={{ marginLeft: "65px" }}>Create Event</h3>
                 <div className="row mb-3">
-                    <label htmlFor="creator" className="col-sm-3 col-form-label">Creator:</label>
-                    <div className="col-sm-8">
+                    <label htmlFor="creator" className="col-sm-4 col-form-label" style={{ marginTop: "10px" }}>Creator:</label>
+                    <div className="col-md-9">
                         <input
                             type="text"
                             className="form-control"
@@ -34,8 +35,8 @@ const Form = () => {
                     </div>
                 </div>
                 <div className="row mb-3">
-                    <label htmlFor="title" className="col-sm-3 col-form-label">Title</label>
-                    <div className="col-sm-8">
+                    <label htmlFor="title:" className="col-sm-3 col-form-label">Title</label>
+                    <div className="col-sm-10">
                         <input
                             type="text"
                             className="form-control"
@@ -47,7 +48,7 @@ const Form = () => {
                 </div>
                 <div className="row mb-3">
                     <label htmlFor="message" className="col-sm-3 col-form-label">Message</label>
-                    <div className="col-sm-8">
+                    <div className="col-sm-10">
                         <textarea
                             rows="3"
                             className="form-control"
@@ -57,9 +58,9 @@ const Form = () => {
                             onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
                     </div>
                 </div>
-                <div className="row mb-3">
+                <div className="row mb-4">
                     <label htmlFor="tags" className="col-sm-3 col-form-label">Tags</label>
-                    <div className="col-sm-8">
+                    <div className="col-sm-10">
                         <input
                             type="text"
                             className="form-control"
@@ -102,15 +103,16 @@ const Form = () => {
                         </div>
                     </div>
                 </div> */}
-                <div className="fileinput">
+
+                <div className="fileinput row mb-4">
                     <FileBase
                         type="file"
                         multiple={false}
                         onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })}
                     />
                 </div>
-                <div className="d-grid gap-2">
-                    <button className="btn btn-primary" type="submit">Submit</button>
+                <div className="d-grid gap-3">
+                    <button className="btn btn-primary " type="submit">Submit</button>
                     <button className="btn btn-dark" type="button" onClick={clear}>Reset</button>
                 </div>
             </form>
