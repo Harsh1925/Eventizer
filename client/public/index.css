@@ -47,6 +47,15 @@ body {
     width: 300px;
 }
 
+#editButton {
+
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-size: 10px;
+    border: none;
+}
+
 .vl {
     border-left: 1px solid rgb(103, 103, 103);
     height: 800px;
