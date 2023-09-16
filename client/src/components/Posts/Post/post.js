@@ -44,10 +44,12 @@ const Post = ({ post }) => {   //distructuring the props
                         </div>
                         <p class="card-text" style={{ marginTop: "10px" }}>T{post.message}</p>
                         <p class="card-text"><small style={{ color: "yellow" }}>Last updated {moment(post.createdAt).fromNow()}</small></p>
+                        <button size="small" type="button" style={{ fontSize: "12px" }} class="btn btn-outline-light" onClick={() => { }} ><i class="bi bi-hand-thumbs-up"> Like {post.likeCount}</i></button>
+                        <button size="small" type="button" style={{ marginLeft: "15px", fontSize: "12px" }} class="btn btn-outline-danger" onClick={() => { }}><i class="bi bi-trash"> Delete </i></button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }

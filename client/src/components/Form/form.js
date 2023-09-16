@@ -21,10 +21,10 @@ const Form = () => {
     return (
         <>
             <form noValidate onSubmit={handleSubmit} className="eventForm">
-                <h3 style={{ marginLeft: "65px" }}>Create Event</h3>
+                <h3 style={{ marginLeft: "45px" }}>Create Event</h3>
                 <div className="row mb-3">
                     <label htmlFor="creator" className="col-sm-4 col-form-label" style={{ marginTop: "10px" }}>Creator:</label>
-                    <div className="col-md-9">
+                    <div className="col-md-10">
                         <input
                             type="text"
                             className="form-control"

@@ -5,10 +5,8 @@ body {
 
 .eventForm {
     margin-top: 20px;
-    border: 1px solid rgb(255, 255, 255);
     padding: 15px;
     position: absolute;
-    right: 15px;
     top: 75px
 }
 
@@ -40,6 +38,30 @@ body {
     /* Modern Browsers */
 }
 
+#newThings {
+
+    position: absolute;
+    left: 45px;
+    top: 80px;
+    height: 600px;
+    width: 300px;
+}
+
+.vl {
+    border-left: 1px solid rgb(103, 103, 103);
+    height: 800px;
+    position: absolute;
+    left: 300px;
+    top: 74px;
+}
+
+.v2 {
+    border-left: 1px solid rgb(103, 103, 103);
+    height: 800px;
+    position: absolute;
+    right: 326px;
+    top: 74px;
+}
 
 /* #cardTags {
     position: absolute;

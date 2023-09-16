@@ -4,6 +4,7 @@ import Posts from "./components/Posts/posts";
 import Form from "./components/Form/form";
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/posts"
+import image from "./components/Img/new.png"
 
 
 function App() {
@@ -20,13 +21,15 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-lg-2">
-            <p>Do something, Where the hell are you ?</p>
+            <img id="newThings" src={image} alt="not Availabel"></img>
+            <div class="vl"></div>
           </div>
           <div className="col-lg-8 boxy" id="cards-body">
             <Posts />
           </div>
           <div className="col-lg-2">
             <Form />
+            <div class="v2"></div>
           </div>
           <div className="card-footer">
             2 days ago
