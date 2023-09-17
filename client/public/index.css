@@ -72,8 +72,6 @@ body {
     top: 74px;
 }
 
-/* #cardTags {
-    position: absolute;
-    right: 95px;
+#cardTags {
     top: 20px
-} */
+}
