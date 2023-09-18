@@ -22,18 +22,20 @@ const Form = ({ currentId, setCurrentId }) => {
             dispatch(updatePost(currentId, postData));
         }
         else {
-
             dispatch(createPost(postData));
         }
+
+        clear();
     }
     const clear = (e) => {
-
+        setCurrentId(null);
+        setPostData({ creator: "", title: "", message: "", tags: "", selectedFile: "" });
     }
 
     return (
         <>
             <form noValidate onSubmit={handleSubmit} className="eventForm">
-                <h3 style={{ marginLeft: "45px" }}>Create Event</h3>
+                <h3 style={{ marginLeft: "45px" }}>{currentId ? "Edit" : "Create"} Event</h3>
                 <div className="row mb-3">
                     <label htmlFor="creator" className="col-sm-4 col-form-label" style={{ marginTop: "10px" }}>Creator:</label>
                     <div className="col-md-10">

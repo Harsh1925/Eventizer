@@ -21,7 +21,7 @@ const Post = ({ post, setCurrentId }) => {   //distructuring the props
                             <span className="card-title" style={{ fontSize: "20px" }} >{post.title}</span>
                             <span style={{ marginLeft: "20px" }} className="card-text" id="cardTags">{post.tags}</span>
                         </div>
-                        <p className="card-text" style={{ marginTop: "10px" }}>T{post.message}</p>
+                        <p className="card-text" style={{ marginTop: "10px" }}>{post.message}</p>
                         <p className="card-text"><small style={{ color: "yellow" }}>Last updated {moment(post.createdAt).fromNow()}</small></p>
                         <button size="small" type="button" style={{ fontSize: "12px" }} className="btn btn-outline-light" onClick={() => { }} ><i className="bi bi-hand-thumbs-up"> Like {post.likeCount}</i></button>
                         <button size="small" type="button" style={{ marginLeft: "15px", fontSize: "12px" }} className="btn btn-outline-danger" onClick={() => { }}><i className="bi bi-trash"> Delete </i></button>
