@@ -1,10 +1,17 @@
 import React from "react";
 import moment from "moment";
-// import photo from "../../Img/img.png"
-// import photo2 from "../../Img/notFound.jpg"
 import photo3 from "../../Img/notFound2.jpg"
+import { deletePost } from "../../../actions/posts";
+import { useDispatch } from "react-redux"
 
 const Post = ({ post, setCurrentId }) => {   //distructuring the props
+
+    const dispatch = useDispatch();
+
+    const handleClick = (id) => {
+        dispatch(deletePost(id))
+    }
+
     return (
 
         <div className="card text-bg-dark mb-3" style={{ maxWidth: "830px", maxHeight: "400px" }}>
@@ -24,7 +31,7 @@ const Post = ({ post, setCurrentId }) => {   //distructuring the props
                         <p className="card-text" style={{ marginTop: "10px" }}>{post.message}</p>
                         <p className="card-text"><small style={{ color: "yellow" }}>Last updated {moment(post.createdAt).fromNow()}</small></p>
                         <button size="small" type="button" style={{ fontSize: "12px" }} className="btn btn-outline-light" onClick={() => { }} ><i className="bi bi-hand-thumbs-up"> Like {post.likeCount}</i></button>
-                        <button size="small" type="button" style={{ marginLeft: "15px", fontSize: "12px" }} className="btn btn-outline-danger" onClick={() => { }}><i className="bi bi-trash"> Delete </i></button>
+                        <button size="small" type="button" style={{ marginLeft: "15px", fontSize: "12px" }} className="btn btn-outline-danger" onClick={() => handleClick(post._id)}><i className="bi bi-trash"> Delete </i></button>
                         <button id="editButton" onClick={() => setCurrentId(post._id)} type="button" className="btn btn-outline-light"  ><i className="bi bi-pencil-square"></i></button>
                     </div>
                 </div>
