@@ -18,15 +18,16 @@ Engagement Features: Integrated a 'Like' functionality, enabling users to expres
 
 Additional Event Information: Implemented a feature to provide users with additional information about events, enhancing their understanding and facilitating informed decisions.
 
-Technologies and Tools Used:
-
-Frontend: React.js, Redux, HTML5, CSS3, JavaScript ES6
-Backend: Node.js, Express.js, MongoDB
-Authentication: JSON Web Tokens (JWT)
-Version Control: Git, GitHub
-Deployment: Heroku
-Database Management: MongoDB Atlas
-Project Impact:
+\
+Technologies and Tools Used:\
+Frontend: React.js, Redux, HTML5, CSS3, JavaScript ES6\
+Backend: Node.js, Express.js, MongoDB\
+Authentication: JSON Web Tokens (JWT)\
+Version Control: Git, GitHub\
+Deployment: Heroku\
+Database Management: MongoDB Atlas\
+\
+Project Impact:\
 Eventizer has successfully created a vibrant community of event enthusiasts who can easily share and discover a wide range of exciting events. It has streamlined event management and engagement, offering users a one-stop platform for event-related activities.\
 \
 ![image](https://github.com/Harsh1925/Eventizer/assets/57036820/a4dc7cb4-041b-4fa7-b757-36eb4b75efbd)
